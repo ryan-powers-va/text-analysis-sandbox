@@ -1,0 +1,18 @@
+{
+  "name": "text-analysis-sandbox",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": { "version": "18" }
+  },
+  "postCreateCommand": "pip install -r requirements.txt && python -m spacy download en_core_web_sm",
+  "forwardPorts": [8501, 8888],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "ms-python.vscode-pylance",
+        "ms-toolsai.jupyter"
+      ]
+    }
+  }
+}
